@@ -1,6 +1,6 @@
 ## cockpit-suse-theme
 
-This repository holds needed files for building a [Cockpit](https://cockpit-project.org/)'s _green-ish theme_ by following the workaround described at https://github.com/cockpit-project/cockpit/pull/17437.
+This repository holds needed files to buid a package<sup>1</sup> for shipping a [Cockpit](https://cockpit-project.org/)'s _green-ish theme_ by following the workaround described at https://github.com/cockpit-project/cockpit/pull/17437.
 
 <p align="center">
   <img src="./cockpit-suse-theme.png" alt="A Cockpit's screenshot while using cockpit-suse-theme" />
@@ -8,7 +8,7 @@ This repository holds needed files for building a [Cockpit](https://cockpit-proj
 
 ## How it works
 
-Based on [how Cockpit selects branding](https://github.com/cockpit-project/cockpit/blob/27cb665b5c135481f900dafac0c1b754ab91b5a0/doc/branding.md#how-cockpit-selects-branding), this package<sup>1</sup> puts a bunch of CSS overrides and needed resources in _/usr/share/cockpit/branding/default_. They will take effect only if Cockpit (actually, a Cockpit module) includes the _css-overrides.css_ as the last CSS file, which is the case for the [openSUSE patched versions](https://build.opensuse.org/project/show/systemsmanagement:cockpit).
+Based on [how Cockpit selects branding](https://github.com/cockpit-project/cockpit/blob/27cb665b5c135481f900dafac0c1b754ab91b5a0/doc/branding.md#how-cockpit-selects-branding), the package<sup>1</sup> puts CSS overrides and resources in _/usr/share/cockpit/branding/default_. They will take effect only if Cockpit (actually, a Cockpit module) includes the _css-overrides.css_ as the last CSS file, which is the case for the [openSUSE patched versions](https://build.opensuse.org/project/show/systemsmanagement:cockpit).
 
 In a nutshell, the mentioned file basically defines some [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) used for redefining either, a CSS rule or the value of another [PatternFly](https://www.patternfly.org/)<sup>2</sup> CSS Custom Property (aka [Global CSS Variable](https://www.patternfly.org/v4/developer-resources/global-css-variables)).
 
