@@ -2,6 +2,10 @@
 
 This repository holds needed files for building a [Cockpit](https://cockpit-project.org/)'s _green-ish theme_ by following the workaround described at https://github.com/cockpit-project/cockpit/pull/17437.
 
+<p align="center">
+  <img src="./cockpit-suse-theme.png" alt="A Cockpit's screenshot while using cockpit-suse-theme" />
+</p>
+
 ## How it works
 
 Based on [how Cockpit selects branding](https://github.com/cockpit-project/cockpit/blob/27cb665b5c135481f900dafac0c1b754ab91b5a0/doc/branding.md#how-cockpit-selects-branding), this package puts a bunch of CSS overrides and needed resources in _/usr/share/cockpit/branding/default_. They will take effect only if Cockpit (actually, a Cockpit module) includes the _css-overrides.css_ as the last CSS file, which is the case for the [openSUSE patched versions](https://build.opensuse.org/project/show/systemsmanagement:cockpit).
